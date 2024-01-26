@@ -1,26 +1,32 @@
-let nombre= prompt("Ingrese nombre")
-alert (`Hola ${nombre} bienvenido al cuestionario sobre Lionel Messi`)
-
-let yn= prompt ("Estas listo? Si/No").toLowerCase();
-while (yn !="si"){
-alert("Adios");
-yn= prompt ("Bienvenido al cuestionario sobre Lionel Messi. Estas listo?").toLowerCase();
-}
-alert ("Comencemos!")
-
-let respuesta= prompt ("Ingrese el nombre del futbolista Messi").toLowerCase();
-if (respuesta ==="lionel" && respuesta !="") {
-    alert (`Correcto ${nombre} ! La respuesta es Lionel Andres Messi`)    
+// OBJETO
+  class Jugador {
+    constructor(nombre, edad, golesCarrera, clubActual) {
+      this.nombre = nombre;
+      this.edad = edad;
+      this.golesCarrera = golesCarrera;
+      this.clubActual = clubActual;
+    }
+  }
+  // ARRAYS
+  const jugadores = [
+    new Jugador("Messi", 36, 821, "Inter Miami"),
+    new Jugador("Ronaldo", 38, 873, "Al Nassr"),
+    new Jugador("Julian Alvarez", 23, 91, "Manchester City"),
+    new Jugador("Haaland", 23, 200, "Manchester City"),
+  ];
+  // PROMPTS
+  let buscarNombre = prompt ( "Ingresar una opcion")
+  while (buscarNombre !== null){
+    let nombreEncontrado = jugadores.find(jugador => jugador.nombre.toLowerCase() === buscarNombre.toLowerCase());
+  if (nombreEncontrado){
+    alert("Jugador encontrado: " +
+    "Nombre: " + nombreEncontrado.nombre +
+    ", Edad: " + nombreEncontrado.edad +
+    ", Goles en carrera: " + nombreEncontrado.golesCarrera +
+    ", Club actual: " + nombreEncontrado.clubActual);
 } else {
-    alert (`Respuesta Incorrecta ${nombre} =( Vuelve a intentarlo`);
+  alert("Jugador no encontrado.");
+  buscarNombre = prompt("Ingresar otro nombre o cancelar para salir");
 }
-
-let pregunta = prompt("De que nacionalidad es Messi?");
-while (pregunta !== "argentino" && pregunta !== "ARGENTINO" && pregunta !== "Argentino") {
-    alert ("Respuesta Incorrecta");
-    pregunta = prompt ("De que nacionalidad es Messi?");
-}
-alert (`Respuesta correcta ${nombre}`);
-
-const despedida = () => alert(`Gracias por participar, ${nombre}. Hasta luego!`);
-despedida()
+alert("Búsqueda cancelada.");
+  }
