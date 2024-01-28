@@ -21,16 +21,15 @@
 let nacionalidad = prompt ("FIltre por nacionalidad de jugador. Europeo o Sudamericano?")
 while(nacionalidad !== null){
 let jugadorFiltrado = jugadores.filter((item)=> item.jugadorContinente.toLowerCase() === nacionalidad.toLocaleLowerCase());
-if (jugadorFiltrado){
+if (jugadorFiltrado.length > 0){
 jugadorFiltrado.forEach((item) =>{
     alert(`Opciones de jugadores: ${item.nombre}`);
 });
 } else {
     alert(`No hay jugadores con la nacionalidad ${nacionalidad}.`);
-  };
+}
   nacionalidad = prompt ("FIltre por nacionalidad de jugador. Europeo o Sudamericano?");
-};
-
+}
   //JUGADORES
   let buscarNombre = prompt ( "Ingresar jugador");
   while (buscarNombre !== null){
