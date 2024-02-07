@@ -19,11 +19,7 @@ boton.addEventListener("click", datos)
 let formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", (e)=>{
     e.preventDefault();
-    let usuario = document.getElementById("usuario").value;
-
-    if (usuario === "coderhouse"){
-        alert(`Bienvenido ${usuario}`)
-    } else {
+    let usuario = document.getElementById("usuario").value.toLowerCase();;
+    usuario === "Coderhouse"? alert(`Bienvenido ${usuario}`):
         alert (`${usuario} no es valido`)
-    }
 });
