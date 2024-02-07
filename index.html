@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Matias Ary Veron</title>
 </head>
 <body>
+    <main>
+        <h1>Matias Ary Veron</h1>
+    </main>
     <nav>
         <li>
             <a href="../index.html">Log in</a>
@@ -14,17 +17,13 @@
             <a href="carrito.html">Carrito</a>
         </li>
     </nav>
-    <button id="boton"> Hacer click para ver la informacion</button>
+    <button id="boton"> Hacer click para ver usuario valido</button>
     <div id="contenedor"></div>
-    <form action="">
-        <label>Nombre:</label>
-        <input type="text" id="nombre" placeholder="Nombre" required="">
+    <form id="formulario">
+        <label>Usuario:</label>
+        <input type="text" id="usuario" placeholder="Ingrese usuario" required=""/>
         <br>
-        <label>Apellido:</label>
-        <input type="text" id="apellido" placeholder="Apellido" required="">
-        <br>
-        <button id="submit"> Ingresar</button>
-
+        <input type="submit" value="Enviar"/>
     </form>
     <script src="./index.js"></script>
 </body>

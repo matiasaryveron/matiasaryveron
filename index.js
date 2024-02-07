@@ -1,5 +1,5 @@
 let boton = document.getElementById("boton");
-let contenedor = document.getElementById("contenedor")
+let contenedor = document.getElementById("contenedor");
 let datosMostrados = false;
 
 const datos = () => {
@@ -9,12 +9,21 @@ const datos = () => {
 } else {
 let div = document.createElement ("div");
 div.innerHTML=`
-<h2>Nombre: coder</h2>
-<h2>Apellido: house</h2>
+<h2>Nombre: coderhouse</h2>
 `;
 contenedor.appendChild(div);
 datosMostrados = true;
 }};
 boton.addEventListener("click", datos)
 
+let formulario = document.getElementById("formulario");
+formulario.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    let usuario = document.getElementById("usuario").value;
 
+    if (usuario === "coderhouse"){
+        alert(`Bienvenido ${usuario}`)
+    } else {
+        alert (`${usuario} no es valido`)
+    }
+});
