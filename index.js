@@ -15,11 +15,11 @@ contenedor.appendChild(div);
 datosMostrados = true;
 }};
 boton.addEventListener("click", datos)
-
 let formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", (e)=>{
     e.preventDefault();
     let usuario = document.getElementById("usuario").value.toLowerCase();
+    localStorage.setItem("usuario", usuario)
     usuario === "coderhouse"?
     Swal.fire({
         title: "Good job!",
