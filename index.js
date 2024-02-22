@@ -3,17 +3,17 @@ let contenedor = document.getElementById("contenedor");
 let datosMostrados = false;
 
 const datos = () => {
-    if (datosMostrados) {
-    contenedor.innerHTML="";
-    datosMostrados = false;
-} else { 
-  setTimeout(() => {
-let div = document.createElement ("div");
-div.innerHTML=`<h2>Nombre: coderhouse</h2>`;
-contenedor.appendChild(div);
-datosMostrados = true;
-}, 1000);
-}
+  datosMostrados ? (
+      contenedor.innerHTML = "",
+      datosMostrados = false
+  ) : (
+      setTimeout(() => {
+          let div = document.createElement("div");
+          div.innerHTML = `<h2>Nombre: coderhouse</h2>`;
+          contenedor.appendChild(div);
+          datosMostrados = true;
+      }, 1000)
+  );
 };
 boton.addEventListener("click", datos)
 let formulario = document.getElementById("formulario");
