@@ -6,14 +6,15 @@ const datos = () => {
     if (datosMostrados) {
     contenedor.innerHTML="";
     datosMostrados = false;
-} else {
+} else { 
+  setTimeout(() => {
 let div = document.createElement ("div");
-div.innerHTML=`
-<h2>Nombre: coderhouse</h2>
-`;
+div.innerHTML=`<h2>Nombre: coderhouse</h2>`;
 contenedor.appendChild(div);
 datosMostrados = true;
-}};
+}, 1000);
+}
+};
 boton.addEventListener("click", datos)
 let formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", (e)=>{
