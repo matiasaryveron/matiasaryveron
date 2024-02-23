@@ -1,7 +1,7 @@
 let boton = document.getElementById("boton");
 let contenedor = document.getElementById("contenedor");
 let datosMostrados = false;
-
+/* FETCH EN DATA.JSON */
 const datos = () => {
   datosMostrados ? (
       contenedor.innerHTML = "",
@@ -22,12 +22,14 @@ const datos = () => {
   );
 };
 boton.addEventListener("click", datos)
+/* FORM, CONFIRMACION DE ALUMNO */
 let formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", (e)=>{
     e.preventDefault();
     let nombre = document.getElementById("nombre").value.toLowerCase();
     localStorage.setItem("nombre", nombre)
     nombre === "matias ary veron"?
+    /* SweetAlert */
     Swal.fire({
         title: "Aprobo el curso de Javascript",
         text: (`Bienvenido ${nombre}`),
