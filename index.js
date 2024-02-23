@@ -13,7 +13,9 @@ const datos = () => {
         setTimeout(() => {
             let div = document.createElement("div");
             div.innerHTML = `<h2>Nombre: ${data[0].nombre}</h2>
+                            <br>
                             <h3> Descripcion: ${data[0].descripcion}</h3>`; 
+                            div.classList.add("centrado");
             contenedor.appendChild(div);
             datosMostrados = true;
         }, 1000);
